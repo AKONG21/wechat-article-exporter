@@ -1,4 +1,10 @@
-name: deno-deploy
+name: Deploy to Deno Deploy  
+uses: denoland/deployctl@v1  
+with:  
+  project: free-wxdown  
+  entrypoint: server/index.ts  
+  root: .output  
+  token: ${{ secrets.DENO_DEPLOY_TOKEN }}
 
 on:
   push:
